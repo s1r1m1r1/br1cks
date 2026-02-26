@@ -1,0 +1,5 @@
+name: agent_bloc_expert
+description: Create a Bloc Expert skill for Antigravity agents.
+version: 0.1.0
+
+vars: {}

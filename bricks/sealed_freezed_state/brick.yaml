@@ -1,0 +1,14 @@
+name: sealed_freezed_state
+description: Mason brick for Bloc State using Freezed union classes.
+
+version: 1.0.0+1
+
+environment:
+  mason: "^0.1.0"
+
+vars:
+  name:
+    type: string
+    description: "The name of the feature (e.g. 'auth' or 'user_profile'). The brick will append 'State' automatically."
+    default: example
+    prompt: "Enter the feature name (snake_case):"

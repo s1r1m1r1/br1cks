@@ -1,0 +1,10 @@
+name: drift_feature
+description: Generate a Drift feature with table and DAO in the data layer.
+version: 0.1.0
+
+vars:
+  name:
+    type: string
+    description: The name of the feature (singular, e.g. "profile").
+    prompt: Feature name?
+    default: profile

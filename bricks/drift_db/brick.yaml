@@ -1,0 +1,10 @@
+name: drift_db
+description: Generate a Drift database client with a KeyValue table and DAO.
+version: 0.1.0
+
+vars:
+  name:
+    type: string
+    description: The name of the database (e.g. "App" or "Db").
+    prompt: Database name?
+    default: App

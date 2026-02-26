@@ -1,0 +1,14 @@
+name: simple_freezed_event
+description: Mason brick for Bloc Events using Freezed classes.
+
+version: 1.0.0+1
+
+environment:
+  mason: "^0.1.0"
+
+vars:
+  name:
+    type: string
+    description: "The name of the feature (e.g. 'auth' or 'user_profile'). The brick will append 'Event' automatically."
+    default: example
+    prompt: "Enter the feature name (snake_case):"

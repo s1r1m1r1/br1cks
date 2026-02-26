@@ -1,0 +1,10 @@
+name: drift_dao
+description: A simple Drift DAO brick.
+version: 0.1.0
+
+vars:
+  name:
+    type: string
+    description: The name of the entity (singular, e.g. "task").
+    prompt: Entity name?
+    default: task
