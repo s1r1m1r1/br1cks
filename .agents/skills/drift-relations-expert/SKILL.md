@@ -16,6 +16,13 @@ description: Drift SQLite relations (FK, Primary Keys, Cascades).
 - **Composite Key**: Если нужно два ключа (многие-ко-многим), переопределяй `primaryKey`:
   `@override Set<Column> get primaryKey => {col1, col2};`
 
+## 4. COMMAND LINE HINTS (STRICT)
+Для создания таблицы используй и укажи корректную директорию:
+`mason make drift_table --name={table_name} --output-dir=lib/features/{feature_name}/data/database --no-hooks`
+
+Для генерации кода после изменений:
+`dart run build_runner build -d`
+
 ## 3. JOIN QUERIES (ЗАПРОСЫ)
 Для моделей 8B: если нужен JOIN, пиши его в DAO:
 ```dart

@@ -7,7 +7,7 @@ description: Optimized for models. Single file BLoC + Freezed.
 Если юзер просит создать BLoC, State или Event:
 1. Проверь `mason.yaml` на наличие нужных бриков: `agent_bloc_expert`, `sealed_freezed_state`, `simple_freezed_event`.
 2. Если брики есть, используй команду:
-   `mason make <brick_name> --name {{name}}`
+   `mason make <brick_name> --name `
 3. После генерации ВСЕГДА запускай:
    `dart run build_runner build --delete-conflicting-outputs`
 
@@ -34,7 +34,7 @@ description: Optimized for models. Single file BLoC + Freezed.
 ## 3. TRIGGER COMMANDS
 - `gen-bloc [Name]`:
   1. Создай файл по шаблону из `/.agents/skills/library/bloc_template.dart`.
-  2. Замени `@{{Name}}` на имя с большой буквы, `@{{name}}` на snake_case.
+  2. Замени `@` на имя с большой буквы, `@` на snake_case.
   3. Напиши в чат:  `dart run build_runner build --delete-conflicting-outputs`
   (Флаг --delete-conflicting-outputs ОБЯЗАТЕЛЕН для перезаписи файлов).
 

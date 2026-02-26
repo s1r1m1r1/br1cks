@@ -3,6 +3,8 @@ bricks:
     path: bricks/bloc_9
   flutter_agents:
     path: bricks/flutter_agents
+  flutter_feature:
+    path: bricks/flutter_feature
   drift_dao:
     path: bricks/drift_dao
   drift_db:

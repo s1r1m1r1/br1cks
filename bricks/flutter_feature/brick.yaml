@@ -1,0 +1,10 @@
+name: flutter_feature
+description: Generate a complex feature with data, domain, and presentation layers, including tests.
+version: 0.1.0
+
+vars:
+  name:
+    type: string
+    description: The name of the feature.
+    default: feature
+    prompt: What is the feature name?

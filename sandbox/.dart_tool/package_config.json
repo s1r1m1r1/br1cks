@@ -99,7 +99,7 @@
     },
     {
       "name": "characters",
-      "rootUri": "file:///Users/today/.pub-cache/hosted/pub.dev/characters-1.4.1",
+      "rootUri": "file:///Users/today/.pub-cache/hosted/pub.dev/characters-1.4.0",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -195,9 +195,9 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///Users/today/.asdf/installs/flutter/3.41.2-stable/packages/flutter",
+      "rootUri": "file:///Users/today/.asdf/installs/flutter/3.38.3-stable/packages/flutter",
       "packageUri": "lib/",
-      "languageVersion": "3.9"
+      "languageVersion": "3.8"
     },
     {
       "name": "flutter_bloc",
@@ -297,9 +297,9 @@
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/today/.pub-cache/hosted/pub.dev/material_color_utilities-0.13.0",
+      "rootUri": "file:///Users/today/.pub-cache/hosted/pub.dev/material_color_utilities-0.11.1",
       "packageUri": "lib/",
-      "languageVersion": "3.5"
+      "languageVersion": "2.17"
     },
     {
       "name": "meta",
@@ -465,9 +465,9 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///Users/today/.asdf/installs/flutter/3.41.2-stable/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///Users/today/.asdf/installs/flutter/3.38.3-stable/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
-      "languageVersion": "3.9"
+      "languageVersion": "3.8"
     },
     {
       "name": "source_gen",
@@ -639,8 +639,8 @@
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.11.0",
-  "flutterRoot": "file:///Users/today/.asdf/installs/flutter/3.41.2-stable",
-  "flutterVersion": "3.41.2",
+  "generatorVersion": "3.10.1",
+  "flutterRoot": "file:///Users/today/.asdf/installs/flutter/3.38.3-stable",
+  "flutterVersion": "3.38.3",
   "pubCache": "file:///Users/today/.pub-cache"
 }

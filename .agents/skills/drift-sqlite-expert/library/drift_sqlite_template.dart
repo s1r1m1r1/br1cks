@@ -5,20 +5,20 @@ import 'package:drift/native.dart';
 part 'database.g.dart';
 
 // --- TABLE DEFINITION ---
-class @{{Name}}s extends Table {
+class @s extends Table {
   IntColumn get id => integer().autoIncrement()();
   TextColumn get title => text().withLength(min: 1, max: 100)();
   DateTimeColumn get createdAt => dateTime().withDefault(currentDateAndTime)();
 }
 
 // --- DAO CLASS ---
-@DriftAccessor(tables: [@{{Name}}s])
-class @{{Name}}Dao extends DatabaseAccessor<AppDatabase> with _$@{{Name}}DaoMixin {
-  @{{Name}}Dao(AppDatabase db) : super(db);
+@DriftAccessor(tables: [@s])
+class @Dao extends DatabaseAccessor<AppDatabase> with _$@DaoMixin {
+  @Dao(AppDatabase db) : super(db);
 }
 
 // --- DATABASE CLASS ---
-@DriftDatabase(tables: [@{{Name}}s], daos: [@{{Name}}Dao])
+@DriftDatabase(tables: [@s], daos: [@Dao])
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(NativeDatabase.memory()); // Replace with actual file connection
 
@@ -26,5 +26,5 @@ class AppDatabase extends _$AppDatabase {
   int get schemaVersion => 1;
   
   // Queries
-  Future<List<@{{Name}}>> getAll@{{Name}}s() => select(@{{Name}}s).get();
+  Future<List<@>> getAll@s() => select(@s).get();
 }

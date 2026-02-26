@@ -17,10 +17,17 @@ Use DAOs to separate database logic by features.
 - **Companions**: Для вставки данных всегда используй `Companion` классы.
 
 ## 3. FLOW (ПОРЯДОК РАБОТЫ)
-Если создаешь новую таблицу:
+Если создаешь новую таблицу/DAO:
 1. Создай файл `tables.dart`.
 2. Создай файл `dao.dart` по шаблону `drift_dao_template.dart`.
 3. Зарегистрируй DAO в `app_database.dart` в секции `daos: [...]`.
 
-## 4. INTEGRATION (СВЯЗКА)
+## 4. COMMAND LINE HINTS (STRICT)
+Для генерации кода используй:
+`mason make drift_dao --name={feature_name} --output-dir=lib/features/{feature_name}/data/database --no-hooks`
+
+Для обновления файлов Freezed/Drift:
+`dart run build_runner build -d`
+
+## 5. INTEGRATION (СВЯЗКА)
 - Внедряй (Inject) экземпляр DAO в **Repository**, а не всю базу данных. Это защищает архитектуру.
