@@ -1,13 +1,17 @@
-# Register bricks which can be consumed via the Mason CLI.
-# Run "mason get" to install all registered bricks.
-# To learn more, visit https://docs.brickhub.dev.
 bricks:
-  # Bricks can be imported via version constraint from a registry.
-  # Uncomment the following line to import the "hello" brick from BrickHub.
-  # hello: 0.1.0+2
-  # Bricks can also be imported via remote git url.
-  # Uncomment the following lines to import the "widget" brick from git.
-  # widget:
-  #   git:
-  #     url: https://github.com/felangel/mason.git
-  #     path: bricks/widget
+  bloc_9:
+    path: bricks/bloc_9
+  flutter_agents:
+    path: bricks/flutter_agents
+  drift_dao:
+    path: bricks/drift_dao
+  drift_db:
+    path: bricks/drift_db
+  drift_feature:
+    path: bricks/drift_feature
+  drift_table:
+    path: bricks/drift_table
+  sealed_freezed_state:
+    path: bricks/sealed_freezed_state
+  simple_freezed_event:
+    path: bricks/simple_freezed_event

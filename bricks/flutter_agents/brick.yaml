@@ -1,0 +1,5 @@
+name: flutter_agents
+description: Creates a set of standard skills for Flutter development including BLoC, Drift, and Architecture.
+version: 0.1.0
+
+vars: {}

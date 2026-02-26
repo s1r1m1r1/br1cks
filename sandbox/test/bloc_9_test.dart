@@ -24,10 +24,7 @@ void main() {
       final tempDir = Directory.systemTemp.createTempSync('bloc_9_test_');
       final target = DirectoryGeneratorTarget(tempDir);
 
-      final vars = <String, dynamic>{
-        'name': 'profile',
-        'bricks_dir': bricksPath,
-      };
+      final vars = <String, dynamic>{'name': 'profile'};
 
       // Выполняем pre_gen hook
       await generator.hooks.preGen(
