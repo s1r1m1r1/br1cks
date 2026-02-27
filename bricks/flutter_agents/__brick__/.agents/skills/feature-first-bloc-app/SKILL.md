@@ -15,19 +15,24 @@ lib/
 ├── core/                # Global infrastructure (network, database client, theme, di)
 │   ├── database/        # Main AppDatabase, migrations, common converters
 │   ├── network/         # HttpClient, Interceptors, DTOs (if shared)
+│   ├── router/          # App router (GoRouter)
+│   ├── theme/           # Global theme & design system
+│   ├── di/              # Root dependency injection / global providers
 │   └── error/           # Global Failures & Exceptions
 ├── shared/              # Reusable UI components & constants (across features)
+│   ├── widgets/         # Atomic UI components (Buttons, Inputs)
+│   └── constants/       # Global constants
 └── features/
     └── {feature_name}/  # Individual feature modules
         ├── data/        # DATA LAYER: External logic, API calls, DB DAOs
         │   ├── database/# Feature-specific Drift tables & DAOs
         │   ├── source/   # Remote/Local sources (API/DataSources)
         │   └── repositories/# Repository implementations
-        ├── domain/      # DOMAIN LAYER (OPTIONAL): Pure business logic 
+        ├── domain/      # DOMAIN LAYER: Pure business logic 
         │   ├── models/  # Freezed Entities (not DTOs!)
         │   └── repositories/# Repository Interfaces (Abstract)
         └── presentation/ # UI LAYER
-            ├── bloc/    # BLoC state management (Split into bloc/event/state)
+            ├── bloc/    # BLoC state management
             ├── pages/   # Screens/Views
             └── widgets/ # Feature-specific UI components
 ```

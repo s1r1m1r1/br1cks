@@ -29,8 +29,51 @@ To generate a complete feature with all layers and tests:
    - Implements `Domain Interfaces`.
    - Communicates with APIs or Database (Drift).
 
-## 🧪 TESTING
-Every feature comes with a pre-generated test file in `test/features/{name}/`. 
+## 🧪 TESTING & MOCKING
+Every feature comes with a pre-generated test file template in `test/features/{name}/`. 
+
+**Testing Architecture (BLoC & Mockito):**
+When testing BLoC components, always stick to this specific pattern using `bloc_test` and mocked repositories:
+
+1. **Setup Mocks**: Use `mockito` to create a mock of the Domain Repository (e.g., `MockI{Name}Repository`).
+2. **Setup BLoC**: Initialize your BLoC in the `setUp` function, injecting the mock repository.
+3. **Use `blocTest`**: Define the `build` phase (stubbing repository responses with `when().thenAnswer()`), the `act` phase (adding events), and the `expect` phase (verifying the sequence of emitted states).
+
+**Example Test Pattern:**
+```dart
+void main() {
+  late {Name}Bloc bloc;
+  late MockI{Name}Repository mockRepository;
+
+  setUp(() {
+    mockRepository = MockI{Name}Repository();
+    bloc = {Name}Bloc(repository: mockRepository);
+  });
+
+  group('{Name}Bloc Tests', () {
+    blocTest<{Name}Bloc, {Name}State>(
+      'emits [{Name}Loading, {Name}Loaded] when data is fetched successfully',
+      build: () {
+        when(mockRepository.getData()).thenAnswer((_) async => Data());
+        return bloc;
+      },
+      act: (bloc) => bloc.add(FetchDataEvent()),
+      expect: () => [isA<{Name}Loading>(), isA<{Name}Loaded>()],
+    );
+
+    blocTest<{Name}Bloc, {Name}State>(
+      'emits [{Name}Loading, {Name}Error] when fetching data fails (throws exception)',
+      build: () {
+        when(mockRepository.getData()).thenThrow(Exception('Failed to fetch data'));
+        return bloc;
+      },
+      act: (bloc) => bloc.add(FetchDataEvent()),
+      expect: () => [isA<{Name}Loading>(), isA<{Name}Error>()],
+    );
+  });
+}
+```
+
 Run tests using: `flutter test test/features/{name}/{name}_test.dart`
 
 ## 🔄 POST-GENERATION
